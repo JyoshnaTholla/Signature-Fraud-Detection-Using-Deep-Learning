@@ -1,0 +1,8 @@
+## Architecture
+
+- **Backbone:** ResNet50 (pretrained on ImageNet), fine-tuned on signature images.
+- **Head:** GlobalAveragePooling -> Dense(256, ReLU) -> Dropout(0.5) -> Dense(1, Sigmoid).
+- **Input:** 224×224×3 image
+- **Loss:** Binary Crossentropy
+- **Optimizer:** Adam (with LR schedule)
+- **Metrics:** Accuracy, Precision, Recall, F1-score, ROC-AUC
